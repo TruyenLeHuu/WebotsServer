@@ -1,0 +1,421 @@
+/* MY CSS */
+@import url('https://fonts.googleapis.com/css2?family=Georama&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Genos&display=swap');
+:root {
+    --blue-linear:linear-gradient(180deg,
+    #89b0f700 0%,
+     #022d7b 50%,
+     #0643d1ce 100%
+    );
+
+    --yellow-linear:linear-gradient(180deg,
+     #FFA931 0%,
+     #2F1600 100%);
+    --button-color: linear-gradient(to right,
+     #033649 0%,
+     rgb(0, 131, 120)  52%,
+     rgb(45, 199, 184) 100%);
+    --time-counter: linear-gradient(180deg,
+    rgba(43, 43, 43, 0) 0%,
+    rgba(113, 113, 113, 0.59) 100%);
+    --pass-checkpoint:  linear-gradient(180deg, 
+    rgba(0, 255, 99, 0.54) 0%, 
+    rgba(0, 44, 17, 0.41) 100%);
+    --fail-checkpoint: linear-gradient(180deg, 
+    #F9513B 0%, 
+    #670000 97.06%);
+}
+
+html,
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #0D0E10 0%, #363636 100%);
+  opacity: 0.9;
+}
+
+/* logo section */
+.logo-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+
+.logo-section #col-2 {
+  width: 33%;
+  flex-direction: column-reverse;
+}
+
+.logo-section .logo-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-section .logo-nav:nth-child(1){
+  flex:3;
+}
+
+.logo-section .logo-nav:nth-child(2){
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h5 {
+  text-align: center;
+  margin:  0;
+  color:white;
+  font-family: 'Genos',sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.logo-section .logo-nav .logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item {
+  width: 8vw;
+  height: 8vw;
+  background: #FFFFFF;
+  border-radius: 50%;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item #uit {
+  width: auto;
+  height: 65%;
+  margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item #doan {
+  width: auto;
+  height: 76%;
+  margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item #hoi {
+  width: auto;
+  height: 76%;
+  margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item #khoa {
+  width: auto;
+  height: 76%;
+  margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item #clb {
+  width: auto;
+  height: 90%;
+  margin: auto;
+  margin-top: 15%;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item img {
+  width:100%;
+  height: auto;
+}
+
+.logo-section .logo-nav .logo-container .vang-item {
+  width: 15vw;
+  height: 6vw;
+  background-color: white;
+  border-radius: 4px; 
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.logo-section .logo-nav .logo-container .vang-item #bosch {
+  width: auto;
+  margin: auto;
+  height: 8vw;
+  margin-top: -1vw;
+}
+
+.logo-section .logo-nav .logo-container .vang-item #dek {
+  width: auto;
+  margin: auto;
+  height: 5vw;
+}
+
+.logo-section .logo-nav .logo-container .vang-item #faraday {
+  height: 4.3vw;
+  width: auto;
+  margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .vang-item #gannha {
+  height: 3.5vw;
+  margin-right: 8%;
+  margin-top: 1.5vw;
+  width: auto;
+}
+
+.logo-section .logo-nav .logo-container .hanh-item {
+  width: 16vw;
+  height: 6vw;
+  background-color: white;
+  border-radius: 4px; 
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.logo-section .logo-nav .logo-container .hanh-item #fpt {
+  height: 5.2vw;
+  width: auto;
+  margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .hanh-item #asic {
+  height: 5.3vw;
+  width: auto;
+  margin: auto;
+}
+/*end logo section */
+
+#lbTitle {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 13px;
+  background: -webkit-linear-gradient(180deg,
+  #912C24 0%,
+  rgba(242,97,68,1) 52%,
+  #f26144 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Genos',sans-serif;
+  font-style: normal;
+  font-weight:1000;
+  font-size: 45px;
+}
+
+.teamname {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.btn-color
+{
+   background-image:  var(--button-color);
+}
+
+/* controller section */
+.controller {
+  /* padding-top: 10px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#controller-name {
+  text-align: center;
+  align-items: center;
+  font-weight: lighter;
+  padding: 5px;
+  margin: 5px;
+  color:white;
+}
+
+.controller>#controller-btn {
+  background-color: rgb(45, 199, 184);
+  width: 100px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: none;
+}
+
+
+
+.teamname-button {
+  color: white;
+  width: 25vw;
+  font-family: 'Georama',sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 5px 0;
+  cursor: pointer;
+  margin-bottom: 1px;
+  background-size: 200% auto;
+  transition: 0.3s;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.teamname-button:hover {
+  background-position: right center;
+}
+
+.teamname-name {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Genos';
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 27px;
+  letter-spacing: 0.08em;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stopwatch {
+  height: 50px;
+  width: 90%;
+  margin: 0 auto;
+  background: var(--time-counter);
+  border: 1px solid white;
+  border-bottom: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 7px;
+  margin-bottom: 7px;
+}
+
+#stopwatch-time {
+    font-family: 'Black Ops One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+}
+/* #generate-checkpoint .not-pass:nth-child(even) {
+  background-color: #00000028;
+}  */
+
+.checkpoint {
+  width: auto;
+  height: 40px;
+  margin: 5px auto;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  font-family:'Genos', sans-serif;
+  font-size: 25px;
+
+  background:var(--blue-linear);
+    color: white;
+    border: 1px solid white;
+    border-bottom: none;
+}
+
+.pass {
+  /* background-color:rgb(228, 72, 72); */
+  background:var(--pass-checkpoint);
+  color: white;
+
+}
+
+.not-pass {
+  background:var(--blue-linear);
+}
+
+.outline {
+  background:var(--fail-checkpoint);
+}
+
+.btn-child {
+  margin: 20px;
+  width: 25vw;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-size: 200% auto;
+  transition: 0.3s;
+  border-radius: 3px;
+  font-weight: bold;
+  color: white;
+}
+
+.btn-child:hover {
+  background-position: right center;
+}
+
+.result {
+  width: auto;
+  height: auto;
+  padding: 0 10px;
+  background:var(--blue-linear);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  border-radius: 5px;
+  justify-content: center;
+  border: 1px solid white;
+  border-bottom: none;
+  font-family:'Genos', sans-serif; 
+  font-size: 22px;
+}
+
+.result-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result-detail>h2 {
+  margin: 5px 0;
+  /* font-size: 28px; */
+}
+
+.save-result {
+  margin-top: 10px; 
+  background-color: #033649;
+  width: auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  color:white;
+  background-size: 200% auto;
+    transition: 0.3s;
+}
+
+.save-result:hover {
+  background-position: right center;
+}
+

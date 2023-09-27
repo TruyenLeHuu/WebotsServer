@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <link rel="stylesheet" href="module/bootstrap/dist/css/bootstrap.min.css">
+    <script src="module/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link href="control.css" rel="stylesheet">
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="control.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="/logo/clipart2183317.png">
+
+    <title>Control webots page</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-fixed-top navbar-blue main-nav" style="max-height:8vh">
+      <div class="container">
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+            <div class="btn-nav"><br />
+            </div>
+        </li>
+    </ul>
+    </nav>
+    <p style="text-align:center;"><img  src="Header_Page_newBG.png" alt="" width="700" height="auto"> </p>
+  
+        <div class="container" style="margin-top: 50px;">
+          <div class="row">
+            <div class="col-sm">
+            <button class="accordion mb-2">Add team:</button>
+            <form  class="form">   
+              <input type="text" id="id" placeholder="Id" class="form-control" required /><br />
+              <input type="text" id="nameTeam" placeholder="Name" class="form-control " required /><br />
+              <input type="text" id="controller" placeholder="Controller" class="form-control" required /><br />
+              <input type="text" id="school" placeholder="School" class="form-control"  required/><br />
+              <button class="btn btn-lg btn-primary btn-block mb-3" id="buttonAddTeam" type="submit">Add team</button>
+            </form>
+            </div>
+            <div class="col-sm">
+              <button class="accordion mb-2">Delete team:</button>
+              <form class="delFormTeam" id="delFormTeam">
+                <input type="text" id="delIdTeam" placeholder="Id" class="form-control" required /> 
+                <button class="btn btn-lg btn-primary btn-block mb-3" id="buttonDlTeam" type="submit">Delete team</button>
+              </form>
+              <button class="accordion mb-2">Update team:</button>
+              <form class="updtFormTeam" id="updtFormTeam"> 
+                <input type="text" id="updateId" placeholder="Id" class="form-control"  required/>
+                <input type="text" id="updateNameTeam" placeholder="Name" class="form-control"  required/>
+                <input type="text" id="updateController" placeholder="Controller" class="form-control" />
+                <input type="text" id="updateSchool" placeholder="School" class="form-control"  /> 
+                <button class="btn btn-lg btn-primary btn-block" id="buttonUdTeam" type="submit">Update team</button><br />
+              </form>
+              
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+            <button class="accordion mb-2">Add group:</button>
+            <form class="formGroup" id="formGroup">   
+              <input type="text" id="name" placeholder="Name" class="form-control " required /><br />
+              <input type="text" id="index" placeholder="Index" class="form-control" required /><br />
+              <input type="text" id="idTeamA" placeholder="Id team A" class="form-control" required /><br />
+              <input type="text" id="idTeamB" placeholder="Id team B" class="form-control"  required/><br />
+              <button class="btn btn-lg btn-primary btn-block mb-3" id="buttonAdd" type="submit">Add group</button>
+            </form>
+            </div>
+            <div class="col-sm">
+              <button class="accordion mb-2">Delete group:</button>
+              <form class="delForm" id="delForm">
+                <input type="text" id="delName" placeholder="Name" class="form-control" required /> 
+                <button class="btn btn-lg btn-primary btn-block mb-3" id="buttonDl" type="submit">Delete group</button>
+              </form>
+              <button class="accordion mb-2">Update group:</button>
+              <form class="updtForm" id="updtForm"> 
+                <input type="text" id="updateName" placeholder="Name" class="form-control"  />
+                <input type="text" id="updateIndex" placeholder="Index" class="form-control"  />
+                <input type="text" id="updateIdTeamA" placeholder="Id team A" class="form-control" />
+                <input type="text" id="updateIdTeamB" placeholder="Id team B" class="form-control"  /> 
+                <button class="btn btn-lg btn-primary btn-block" id="buttonUd" type="submit">Update group</button><br />
+              </form>
+              </div>
+          </div>
+          
+        </div>
+  </body>
+</html>

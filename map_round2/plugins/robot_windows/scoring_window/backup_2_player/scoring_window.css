@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Genos&display=swap');
+:root {
+    --blue-linear:linear-gradient(180deg,
+     #070056 0%,
+     rgba(21, 4, 220, 0.738823) 46.35%,
+     rgba(103, 89, 255, 0.499256) 100%);
+
+    --yellow-linear:linear-gradient(180deg,
+     #FFA931 0%,
+     #2F1600 100%);
+    --button-color: linear-gradient(to bottom,#edc309,#ed6c09,
+    #F26144 ,
+    #912C24 );
+    --button-color-hover: #f26144;
+    --time-counter: linear-gradient(180deg,
+    rgba(43, 43, 43, 0) 0%,
+    rgba(113, 113, 113, 0.59) 100%);
+    --pass-checkpoint:  linear-gradient(180deg, 
+    rgba(0, 255, 99, 0.54) 0%, 
+    rgba(0, 44, 17, 0.41) 100%);
+    --fail-checkpoint: linear-gradient(180deg, 
+    #F9513B 0%, 
+    #670000 97.06%);
+}
+.geo-font {
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 12px;
+    /* or 67% */   
+    
+    color: #FFFFFF;   
+}
+html,
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #0D0E10 0%, #363636 100%);
+    opacity: 0.9;
+}
+
+
+/* logo section */
+
+.logo-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.logo-section #col-1 {
+    width: 66%;
+}
+
+.logo-section #col-2 {
+    width: 33%;
+    flex-direction: column-reverse;
+}
+.logo-section .logo-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+h5 {
+    text-align: center;
+    margin: 0;
+    color: white;
+    font-family: 'Genos',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.logo-section .logo-nav .logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    gap: 5px;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item {
+    width: 8vw;
+    height: 8vw;
+    background: #FFFFFF;
+    border-radius: 50%;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item #uit {
+    width: auto;
+    height: 65%;
+    margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item #doan {
+    width: auto;
+    height: 76%;
+    margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item #hoi {
+    width: auto;
+    height: 76%;
+    margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item #khoa {
+    width: auto;
+    height: 76%;
+    margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item #clb {
+    width: auto;
+    height: 90%;
+    margin: auto;
+    margin-top: 15%;
+}
+.logo-section .logo-nav .logo-container .to-chuc-item img {
+    width: 100%;
+    height: auto;
+}
+
+
+.logo-section .logo-nav .logo-container .vang-item {
+    width: 15vw;
+    height: 6vw;
+    background-color: white;
+    border-radius: 4px; 
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+.logo-section .logo-nav .logo-container .vang-item #bosch {
+    width: auto;
+    margin: auto;
+    height: 8vw;
+    margin-top: -1vw;
+}
+
+.logo-section .logo-nav .logo-container .vang-item #dek {
+    width: auto;
+    margin: auto;
+    height: 5vw;
+}
+
+.logo-section .logo-nav .logo-container .vang-item #faraday {
+    height: 4.3vw;
+    width: auto;
+    margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .vang-item #gannha {
+    height: 3.5vw;
+    margin-right: 8%;
+    margin-top: 1.5vw;
+    width: auto;
+}
+.logo-section .logo-nav .logo-container .vang-item img {
+    width: 100%;
+}
+
+
+
+.logo-section .logo-nav .logo-container .hanh-item {
+    width: 16vw;
+    height: 6vw;
+    background-color: white;
+    border-radius: 4px; 
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.logo-section .logo-nav .logo-container .hanh-item #fpt {
+    height: 5.2vw;
+    width: auto;
+    margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .hanh-item #asic {
+    height: 5.3vw;
+    width: auto;
+    margin: auto;
+}
+
+
+
+
+/*end logo section */
+
+
+/* Control section */
+
+.control-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.control-section .previous-nav, .control-section .next-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-section .control-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.previous-button,
+.next-button {
+    
+    color: white;
+    width: 35vw;
+    /* height: 100%; */
+    padding: 3px 0;
+    font-family: 'Georama',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    background-size: 200% auto;
+
+    
+    transition: 0.3s;
+}
+
+.btn-color
+{
+   background-image:  linear-gradient(to right,
+   #912C24 0%,
+     rgba(242,97,68,1) 52%,
+     #f26144 100%);
+}
+.previous-button:hover,
+.next-button:hover {
+    background-position: right center;
+    
+}
+
+.swap-button,
+.load-button,
+.save-button {
+    color: white;
+    width: 17vw;
+    font-family: 'Georama',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 3px 0;
+    cursor: pointer;
+    margin-bottom: 1px;
+    background-size: 200% auto;
+
+    
+    transition: 0.3s;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.swap-button:hover,
+.load-button:hover {
+    background-position: right center;
+}
+
+.save-button:hover {
+    background-position: right center;
+}
+.team-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  color: white;
+}
+
+.team-info-size {
+  width: 45%;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+
+
+
+.img1vs1 {
+    margin: auto;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 72px;
+    height: 72px;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.team-name {
+    
+    justify-content: center;
+    font-family: 'Genos';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 27px;
+    letter-spacing: 0.08em;;
+}
+
+.controller {
+    justify-content: center;
+    font-weight:lighter;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button-nav {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* End Control section */
+
+.stopwatch {
+  height: 50px;
+  width: 90%;
+  margin: 0 auto;
+  background: var(--time-counter);
+  border: 1px solid white;
+  border-bottom: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 7px;
+  margin-bottom: 7px;
+}
+
+#stopwatch-time {
+    font-family: 'Black Ops One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+
+
+}
+/* Checkpoint-section */
+
+.checkpoint-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.generate-checkpoint {
+    padding-bottom: 5px;
+}
+
+.generate-checkpoint_blue {
+    padding-right : 10px;
+}
+
+.generate-checkpoint_red {
+    padding-left : 10px;
+}
+
+.generate-checkpoint.generate-checkpoint_blue .checkpoint {
+    background:var(--blue-linear);
+    color: white;
+    border: 1px solid white;
+    border-bottom: none;
+}
+
+.generate-checkpoint.generate-checkpoint_red .checkpoint {
+    background:var(--yellow-linear);
+    color: white;
+    border: 1px solid white;
+    border-top: none;
+}
+.checkpoint {
+    width: 48vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 4px 0; 
+    border-radius: 4px;
+    
+    font-family:'Genos', sans-serif; 
+    font-size: 25px;
+}
+
+.checkpoint h4 {
+    margin: 2px 2px;
+    padding: 0 6px;
+}
+
+.not-pass:nth-child(even) {
+    background-color: #cdb38073;
+}
+
+.pass {
+    background: var(--pass-checkpoint);
+}
+
+.outline {
+    background: var(--fail-checkpoint);
+}
+
+/* nếu team thua thì sẽ chuyển sang màu xám  */
+
+.lost {
+    background-color: rgb(88, 88, 88);
+    color: white;
+}
+
+.generate-checkpoint.generate-checkpoint_blue .result {
+    background: var(--blue-linear);
+    border: 1px solid white;
+    border-bottom: none;
+}
+
+.generate-checkpoint.generate-checkpoint_red .result {
+    background: var(--yellow-linear);
+    border: 1px solid white;
+    border-top: none;
+}
+.result {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #069b98; */
+    color: white;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 0px 0;
+    font-family:'Genos', sans-serif; 
+    font-size: 22px;
+}
+
+.result-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: larger;
+}
+
+.result h4 {
+    margin: 0px 5px;
+}
+
+
+/* End Checkpoint-section */
+
+#winner-noti {
+    width: auto;
+    height: 60px;
+    /* background-color: rgb(0, 255, 0); */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+#winner-team {
+    text-align: center;
+    margin: 0;
+    font-size: xx-large;
+}
+
+/* Control test section */
+
+.control-test {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    display: none;
+}
+
+.team-a,
+.team-b {
+    width: 40vw;
+    /* background: linear-gradient(124deg, rgba(129,84,252,1) 0%, rgba(148,0,166,1) 75%); */
+    color: white;
+}
+
+.team-win,
+.team-pass,
+.team-outline {
+    border-radius: 2px;
+    background-color: rgb(154, 91, 255);
+    border: 1px solid rgba(250, 247, 255, 0.712);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.team-win:hover,
+.team-pass:hover,
+.team-outline:hover {
+    background: linear-gradient(124deg, rgba(129, 84, 252, 1) 0%, rgba(148, 0, 166, 1) 75%);
+}
+
+
+/* End Control test section */

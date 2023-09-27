@@ -1,0 +1,59 @@
+html,
+body{
+    background-color: #f0f8ff;
+}
+.table {
+    width: 75%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+thead{
+    color: rgb(0, 0, 0);
+    background:  rgb(130, 176, 228);
+  }
+.navbar {
+    background-color: #051b40;
+  }
+.accordion {
+    background-color: rgb(130, 176, 228);
+    color: #444;
+    cursor: pointer;
+    padding: 18px; 
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+.active, .accordion:hover {
+    background-color: #ccc;
+  }
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+  
+button.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+#TempHum {
+  color: rgb(151, 108, 220);
+
+}
+
+li.paginate_button.active {
+  background-color: #ffffff;
+  color: rgb(15, 138, 163);
+}
