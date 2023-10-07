@@ -18,6 +18,10 @@ router.get('/currentteam', controller.getCurrentTeam)
 router.get('/nextteam', controller.getNextTeam)
 router.get('/swap', controller.getSwapTeam)
 router.get('/savedb',controller.addResult)
+router.get('/previousteam1', controller.getPreviousTeam1)
+router.get('/currentteam1', controller.getCurrentTeam1)
+router.get('/nextteam1', controller.getNextTeam1)
+router.get('/savedb1',controller.addResult1)
 return router;
 
 }

@@ -16,7 +16,7 @@ var isOutline = false;
 
 function LoadCurrentTeam() {
 	var xmlHttp = new XMLHttpRequest();
-	var URL = `http://localhost:8081/currentteam`;
+	var URL = `http://localhost:3001/currentteam1`;
 	xmlHttp.open("GET", URL);
 	xmlHttp.send(null);
 	flag = true;
@@ -124,7 +124,7 @@ function UpdateTeam(str) {
 
 function LoadNextTeam() {
 	var xmlHttp = new XMLHttpRequest();
-	var URL = `http://localhost:8081/nextteam`;
+	var URL = `http://localhost:3001/nextteam1`;
 	xmlHttp.open("GET", URL);
 	xmlHttp.send(null);
 	flag = true;
@@ -138,7 +138,7 @@ function LoadNextTeam() {
 
 function LoadPreviousTeam() {
 	var xmlHttp = new XMLHttpRequest();
-	var URL = `http://localhost:8081/previousteam`;
+	var URL = `http://localhost:3001/previousteam1`;
 	xmlHttp.open("GET", URL);
 	xmlHttp.send(null);
 	flag = true;
@@ -153,7 +153,7 @@ function LoadPreviousTeam() {
 // Save result
 function SaveResult2DB() {
 	var xmlHttp = new XMLHttpRequest();
-	var URL = `http://localhost:8081/savedb?totalscore=${totalScrore}&finishtime=${finishTime}`;
+	var URL = `http://localhost:3001/savedb1?totalscore=${totalScrore}&finishtime=${finishTime}`;
 	xmlHttp.open("GET", URL);
 	xmlHttp.send(null);
 	xmlHttp.onreadystatechange = (e) => {

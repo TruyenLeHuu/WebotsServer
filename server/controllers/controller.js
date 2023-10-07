@@ -1,7 +1,7 @@
 const groups = require('../models/groups')
 const results = require('../models/results')
 const teams = require('../models/teams')
-var currentIndex = 1;
+var currentIndex = 0;
 var swap = 0;
 const addResult = async(req,res,next) => {
     console.log(req.query);
@@ -170,6 +170,8 @@ const getSwapTeam = async(req,res,next) => {
     }  
 }
 const getPreviousTeam = async(req,res,next) => {
+    if (currentIndex <= 1) 
+        currentIndex = 2
     try
     {   
         swap = 0;
@@ -254,5 +256,78 @@ const getNextTeam = async(req,res,next) => {
     }  
 }
 
+const getPreviousTeam1 = async(req,res,next) => {
+    if (currentIndex <= 1) 
+        currentIndex = 2
+    try
+    {   
+        teams.findOne({id: --currentIndex}, (err, resTeam) => {
+            var respond = {
+                    teamName: resTeam.name,
+                    controller: resTeam.controller,
+                    school: resTeam.school
+            }
+            res.status(200).json(respond)
+        })
+    }
+    catch (err) {
+        res.json({message:"Error"})
+    }  
+}
+const getCurrentTeam1 = async(req,res,next) => {
+    try
+    {   
+        teams.findOne({id: currentIndex}, (err, resTeam) => {
+            var respond = {
+                    teamName: resTeam.name,
+                    controller: resTeam.controller,
+                    school: resTeam.school
+            }
+            res.status(200).json(respond)
+        })
+    }
+    catch (err) {
+        res.json({message:"Error"})
+    }
+}
+const getNextTeam1 = async(req,res,next) => {
+    try
+    {   
+        teams.findOne({id: ++currentIndex}, (err, resTeam) => {
+            var respond = {
+                    teamName: resTeam.name,
+                    controller: resTeam.controller,
+                    school: resTeam.school
+            }
+            res.status(200).json(respond)
+        })
+    }
+    catch (err) {
+        res.json({message:"Error"})
+    }
+}
+const addResult1 = async(req,res,next) => {
+    // console.log(req.query);
+    // const teamA = JSON.parse(req.query.teamA)
+
+    try{
+        teams.findOne({id: currentIndex}, async(err, resTeam) => {
+            const newResult = new results({
+                name: resTeam.name,
+                controller: resTeam.controller,
+                school: resTeam.school,
+                score: req.query.totalscore,
+                time: req.query.finishtime
+            })
+            await newResult.save();
+            res.json({message:"Save Result Successfully"})
+            console.log("Save Result Successfully")
+        })
+    }
+    catch (err) {
+        res.json({message:err})
+    }
+}
 module.exports = {addGroup, deleteGroup, updateGroup, addTeam, deleteTeam, updateTeam,
-    getPreviousTeam, getCurrentTeam, getNextTeam, getSwapTeam, addResult}
+    getPreviousTeam, getCurrentTeam, getNextTeam, getSwapTeam, addResult,
+    getPreviousTeam1, getCurrentTeam1, getNextTeam1, addResult1}
