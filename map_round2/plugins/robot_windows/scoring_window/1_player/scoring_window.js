@@ -103,6 +103,7 @@ function Start() {
 	window.robotWindow.send('start');
 }
 
+
 function Reset() {
 	ResetCheckpoint();
 	totalScrore = 0;
@@ -222,4 +223,21 @@ function Outline() {
 		// console.log(id);
 		document.getElementById(id).setAttribute("class", "checkpoint outline");
 	}
+}
+
+function Cam1() {
+	console.log("Cam1");
+	window.robotWindow.send('cam1');
+}
+function Cam2() {
+	console.log("Cam2");
+	window.robotWindow.send('cam2');
+}
+function Cam3() {
+	console.log("Cam3");
+	window.robotWindow.send('cam3');
+}
+function Cam4() {
+	console.log("Cam4");
+	window.robotWindow.send('cam4');
 }

@@ -256,9 +256,27 @@ h5 {
     
     transition: 0.3s;
 }
-
+.btn-child {
+    margin: 20px;
+    width: 25vw;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-size: 200% auto;
+    transition: 0.3s;
+    border-radius: 3px;
+    font-weight: bold;
+    color: white;
+  }
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .btn-color
-{
+{   
    background-image:  linear-gradient(to right,
    #912C24 0%,
      rgba(242,97,68,1) 52%,

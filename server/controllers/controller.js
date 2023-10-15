@@ -148,19 +148,21 @@ const getSwapTeam = async(req,res,next) => {
         groups.findOne({index: currentIndex}, (err, group) => {
             teams.findOne({id: group.idTeamA}, (err, resTeamA) => {
                 teams.findOne({id: group.idTeamB}, (err, resTeamB) => {
-                    var respond = {
-                        teamA: {
-                            name: swap == 1 ? resTeamB.name : resTeamA.name,
-                            controller: swap == 1 ? resTeamB.controller : resTeamA.controller,
-                            school: swap == 1 ? resTeamB.school : resTeamA.school
-                        },
-                        teamB: {
-                            name: swap == 1 ? resTeamA.name : resTeamB.name,
-                            controller: swap == 1 ? resTeamA.controller : resTeamB.controller,
-                            school: swap == 1 ? resTeamA.school : resTeamB.school
+                    if (resTeamA && resTeamB) {
+                        var respond = {
+                            teamA: {
+                                name: swap == 1 ? resTeamB.name : resTeamA.name,
+                                controller: swap == 1 ? resTeamB.controller : resTeamA.controller,
+                                school: swap == 1 ? resTeamB.school : resTeamA.school
+                            },
+                            teamB: {
+                                name: swap == 1 ? resTeamA.name : resTeamB.name,
+                                controller: swap == 1 ? resTeamA.controller : resTeamB.controller,
+                                school: swap == 1 ? resTeamA.school : resTeamB.school
+                            }
                         }
-                    }
-                    res.status(200).json(respond)
+                        res.status(200).json(respond)
+                    }   
                 })
             })
         })
@@ -176,23 +178,28 @@ const getPreviousTeam = async(req,res,next) => {
     {   
         swap = 0;
         groups.findOne({index: --currentIndex}, (err, group) => {
+            if (group)
             teams.findOne({id: group.idTeamA}, (err, resTeamA) => {
                 teams.findOne({id: group.idTeamB}, (err, resTeamB) => {
-                    var respond = {
-                        teamA: {
-                            name: resTeamA.name,
-                            controller: resTeamA.controller,
-                            school: resTeamA.school
-                        },
-                        teamB: {
-                            name: resTeamB.name,
-                            controller: resTeamB.controller,
-                            school: resTeamB.school
+                    if (resTeamA && resTeamB) {
+                        var respond = {
+                            teamA: {
+                                name: resTeamA.name,
+                                controller: resTeamA.controller,
+                                school: resTeamA.school
+                            },
+                            teamB: {
+                                name: resTeamB.name,
+                                controller: resTeamB.controller,
+                                school: resTeamB.school
+                            }
                         }
+                        res.status(200).json(respond)
                     }
-                    res.status(200).json(respond)
                 })
             })
+            else 
+            res.json({message:"Error"})
         })
     }
     catch (err) {
@@ -204,23 +211,28 @@ const getCurrentTeam = async(req,res,next) => {
     {   
         swap = 0;
         groups.findOne({index: currentIndex}, (err, group) => {
+            if (group)
             teams.findOne({id: group.idTeamA}, (err, resTeamA) => {
                 teams.findOne({id: group.idTeamB}, (err, resTeamB) => {
-                    var respond = {
-                        teamA: {
-                            name: resTeamA.name,
-                            controller: resTeamA.controller,
-                            school: resTeamA.school
-                        },
-                        teamB: {
-                            name: resTeamB.name,
-                            controller: resTeamB.controller,
-                            school: resTeamB.school
+                    if (resTeamA && resTeamB) {
+                        var respond = {
+                            teamA: {
+                                name: resTeamA.name,
+                                controller: resTeamA.controller,
+                                school: resTeamA.school
+                            },
+                            teamB: {
+                                name: resTeamB.name,
+                                controller: resTeamB.controller,
+                                school: resTeamB.school
+                            }
                         }
+                        res.status(200).json(respond)
                     }
-                    res.status(200).json(respond)
                 })
             })
+            else 
+            res.json({message:"Error"})
         })
     }
     catch (err) {
@@ -232,23 +244,32 @@ const getNextTeam = async(req,res,next) => {
     {  
         swap = 0;
         groups.findOne({index: ++currentIndex}, (err, group) => {
+            if (group)
             teams.findOne({id: group.idTeamA}, (err, resTeamA) => {
                 teams.findOne({id: group.idTeamB}, (err, resTeamB) => {
-                    var respond = {
-                        teamA: {
-                            name: resTeamA.name,
-                            controller: resTeamA.controller,
-                            school: resTeamA.school
-                        },
-                        teamB: {
-                            name: resTeamB.name,
-                            controller: resTeamB.controller,
-                            school: resTeamB.school
+                    if (resTeamA && resTeamB) {
+                        var respond = {
+                            teamA: {
+                                name: resTeamA.name,
+                                controller: resTeamA.controller,
+                                school: resTeamA.school
+                            },
+                            teamB: {
+                                name: resTeamB.name,
+                                controller: resTeamB.controller,
+                                school: resTeamB.school
+                            }
                         }
+                        res.status(200).json(respond)
                     }
-                    res.status(200).json(respond)
+                    else {
+                        res.status(200).json(null); 
+                        currentIndex = 0;
+                    }
                 })
             })
+            else 
+            res.json({message:"Error"})
         })
     }
     catch (err) {
@@ -262,12 +283,14 @@ const getPreviousTeam1 = async(req,res,next) => {
     try
     {   
         teams.findOne({id: --currentIndex}, (err, resTeam) => {
-            var respond = {
-                    teamName: resTeam.name,
-                    controller: resTeam.controller,
-                    school: resTeam.school
+            if (resTeam) {
+                var respond = {
+                        teamName: resTeam.name,
+                        controller: resTeam.controller,
+                        school: resTeam.school
+                }
+                res.status(200).json(respond)
             }
-            res.status(200).json(respond)
         })
     }
     catch (err) {
@@ -278,12 +301,14 @@ const getCurrentTeam1 = async(req,res,next) => {
     try
     {   
         teams.findOne({id: currentIndex}, (err, resTeam) => {
-            var respond = {
-                    teamName: resTeam.name,
-                    controller: resTeam.controller,
-                    school: resTeam.school
+            if (resTeam) {
+                var respond = {
+                        teamName: resTeam.name,
+                        controller: resTeam.controller,
+                        school: resTeam.school
+                }
+                res.status(200).json(respond)
             }
-            res.status(200).json(respond)
         })
     }
     catch (err) {
@@ -294,12 +319,23 @@ const getNextTeam1 = async(req,res,next) => {
     try
     {   
         teams.findOne({id: ++currentIndex}, (err, resTeam) => {
-            var respond = {
-                    teamName: resTeam.name,
-                    controller: resTeam.controller,
-                    school: resTeam.school
+            if (err) {
+                // Xử lý lỗi ở đây nếu cần
+                console.error("Error: ", err);
+                res.status(500).json({ error: "Query error" });
+            } else {
+                if (resTeam) {
+                    var respond = {
+                        teamName: resTeam.name,
+                        controller: resTeam.controller,
+                        school: resTeam.school
+                    };
+                    res.status(200).json(respond);
+                } else {
+                    res.status(200).json(null); 
+                    currentIndex = 0;
+                }
             }
-            res.status(200).json(respond)
         })
     }
     catch (err) {
@@ -312,16 +348,18 @@ const addResult1 = async(req,res,next) => {
 
     try{
         teams.findOne({id: currentIndex}, async(err, resTeam) => {
-            const newResult = new results({
-                name: resTeam.name,
-                controller: resTeam.controller,
-                school: resTeam.school,
-                score: req.query.totalscore,
-                time: req.query.finishtime
-            })
-            await newResult.save();
-            res.json({message:"Save Result Successfully"})
-            console.log("Save Result Successfully")
+            if (resTeam){
+                const newResult = new results({
+                    name: resTeam.name,
+                    controller: resTeam.controller,
+                    school: resTeam.school,
+                    score: req.query.totalscore,
+                    time: req.query.finishtime
+                })
+                await newResult.save();
+                res.json({message:"Save Result Successfully"})
+                console.log("Save Result Successfully")
+            }
         })
     }
     catch (err) {
