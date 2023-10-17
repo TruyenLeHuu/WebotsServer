@@ -3,6 +3,30 @@ const results = require('../models/results')
 const teams = require('../models/teams')
 var currentIndex = 0;
 var swap = 0;
+const dashboard = async (req, res) => {
+    let list_results = await results.find().select('name school score time rawTime -_id');
+    list_results.sort((a, b) => {
+        if (a.score === b.score) {
+          return a.rawTime - b.rawTime;
+        }
+        return b.score - a.score;
+      });
+      
+    let filteredResult = [];
+    let nameSet = new Set();
+
+    for (let i = 0; i < list_results.length; i++) {
+        if (!nameSet.has(list_results[i].name)) {
+            filteredResult.push(list_results[i]);
+            nameSet.add(list_results[i].name);
+        }
+    }
+    res.render("./dashboard.ejs", {resultsList: filteredResult});
+    // console.info(list_results)
+  }
+const control = async (req, res) => {
+    res.render("./control.ejs", );
+  }
 const addResult = async(req,res,next) => {
     console.log(req.query);
     const teamA = JSON.parse(req.query.teamA)
@@ -354,7 +378,8 @@ const addResult1 = async(req,res,next) => {
                     controller: resTeam.controller,
                     school: resTeam.school,
                     score: req.query.totalscore,
-                    time: req.query.finishtime
+                    time: req.query.finishtime,
+                    rawTime: req.query.rawtime
                 })
                 await newResult.save();
                 res.json({message:"Save Result Successfully"})
@@ -366,6 +391,6 @@ const addResult1 = async(req,res,next) => {
         res.json({message:err})
     }
 }
-module.exports = {addGroup, deleteGroup, updateGroup, addTeam, deleteTeam, updateTeam,
+module.exports = {dashboard, control, addGroup, deleteGroup, updateGroup, addTeam, deleteTeam, updateTeam,
     getPreviousTeam, getCurrentTeam, getNextTeam, getSwapTeam, addResult,
     getPreviousTeam1, getCurrentTeam1, getNextTeam1, addResult1}

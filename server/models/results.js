@@ -16,6 +16,9 @@ const resultsSchema = new Schema ({
     time:{
         type : String
     },
+    rawTime:{
+        type : Number
+    },
 }, {timestamps:true})
 const resultsModel = mongoose.model('Results', resultsSchema)
 module.exports=resultsModel

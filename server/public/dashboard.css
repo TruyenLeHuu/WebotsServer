@@ -1,0 +1,285 @@
+*{
+	font-family: Fjalla One;
+  margin: 0;
+	border: 0;
+	padding: 0;
+	color: white;
+}
+/* logo section */
+.logo-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.logo-section #col-2 {
+  width: 33%;
+  flex-direction: column-reverse;
+}
+
+.logo-section .logo-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-section .logo-nav:nth-child(1){
+  flex:3;
+}
+
+.logo-section .logo-nav:nth-child(2){
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h5 {
+  text-align: center;
+  margin:  0;
+  color:white;
+  font-family: 'Genos',sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.logo-section .logo-nav .logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item {
+  width: 3vw;
+  height: 3vw;
+  background: #FFFFFF;
+  border-radius: 50%;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item #uit {
+  width: auto;
+  height: 65%;
+  margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item #doan {
+  width: auto;
+  height: 76%;
+  margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item #hoi {
+  width: auto;
+  height: 76%;
+  margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item #khoa {
+  width: auto;
+  height: 76%;
+  margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item #clb {
+  width: auto;
+  height: 90%;
+  margin: auto;
+  margin-top: 15%;
+}
+
+.logo-section .logo-nav .logo-container .to-chuc-item img {
+  width:100%;
+  height: auto;
+}
+
+.logo-section .logo-nav .logo-container .vang-item {
+  width: 10vw;
+  height: 3vw;
+  background-color: white;
+  border-radius: 4px; 
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.logo-section .logo-nav .logo-container .vang-item #bosch {
+  width: auto;
+  margin: auto;
+  height: 6vw;
+  margin-top: -1.5vw;
+}
+
+.logo-section .logo-nav .logo-container .vang-item #dek {
+  width: auto;
+  margin: auto;
+  height: 4vw;
+  margin-top: -0.5vw;
+}
+
+.logo-section .logo-nav .logo-container .vang-item #faraday {
+  height: 2vw;
+  width: auto;
+  margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .vang-item #gannha {
+  height: 2vw;
+  margin-right: 8%;
+  margin-top: 0.8vw;
+  width: auto;
+}
+
+.logo-section .logo-nav .logo-container .hanh-item {
+  width: 10vw;
+  height: 3vw;
+  background-color: white;
+  border-radius: 4px; 
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.logo-section .logo-nav .logo-container .hanh-item #fpt {
+  height: 4vw;
+  width: auto;
+  margin: auto;
+  margin-top: -0.5vw;
+}
+
+.logo-section .logo-nav .logo-container .hanh-item #asic {
+  height: 4vw;
+  width: auto;
+  margin: auto;
+  margin-top: -0.5vw;
+}
+/*end logo section */
+
+#lbTitle {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  background: -webkit-linear-gradient(180deg,
+  #912C24 0%,
+  rgba(242,97,68,1) 52%,
+  #f26144 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Genos',sans-serif;
+  font-style: normal;
+  font-weight:1000;
+  font-size: 40px;
+}
+body {
+  background-size: cover;
+  background-repeat: repeat;
+  animation: changeBackground 40s infinite;
+}
+
+html{
+  background-color: #000000;
+}
+
+.ptable table{
+  background: rgba(0, 0, 0, 0.7);
+	margin: 30px auto;
+	border-collapse: collapse;
+}
+
+.ptable{
+	margin: 0px 0% 30px 0%;
+}
+
+th, td {
+    padding: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+th{
+	background-color: black;
+	color: #ffe221;
+}
+
+.headin{
+	text-align: center;
+	text-decoration: none;
+	color: #ffe221;
+	margin: 15px;
+	display: block;
+}
+
+.wpos{
+	text-align: center;
+}
+
+.wpos td{
+	color: #77ff21;
+}
+.wpos th{
+	color: #77ff21;
+}
+.pos{
+	text-align: center;
+}
+
+.pos td{
+	color: #ff7b21;
+}
+.pos th{
+	color: #ff7b21;
+}
+
+table .col{
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.wpos:hover{
+	background-color: #77ff21;
+}
+
+.wpos:hover td{
+	color: #000000;
+}
+
+.pos:hover{
+	background-color: #ff7b21;
+}
+
+.pos:hover td{
+	color: #000000;
+}
+
+@keyframes changeBackground {
+  0% {
+      background-image: url('2006_Caparo_T1_supercar_supercars_race_racing_____g_2048x1536.jpg');
+  }
+  25% {
+      background-image: url('1964_Shelby_Cobra_USRRC_Roadster_CSX_2557_race_racing_supercar_supercars_classic_muscle___r_2048x1536.jpg');
+  }
+  50% {
+      background-image: url('1964_Shelby_Cobra_289_MkII_supercar_supercars_classic_muscle_e_2048x1536.jpg');
+  }
+  75% {
+    background-image: url('2013_Lamborghini_Egoista_Concept_supercar_supercars___w_2000x1414.jpg');
+  }
+  100% {
+    background-image: url('2006_Caparo_T1_supercar_supercars_race_racing_____g_2048x1536.jpg');
+  }
+}

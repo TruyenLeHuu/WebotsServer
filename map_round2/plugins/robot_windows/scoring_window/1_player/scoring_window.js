@@ -6,12 +6,13 @@ const resultFinishTime = document.getElementById("result-finishtime")
 const saveDB = document.getElementById("save-db");
 const controllerName = document.getElementById("controller-namee");
 
-const numberOfCheckpoint = 15;
+const numberOfCheckpoint = 5;
 
 var jsonTeam = null;
 var totalScrore = 0;
 var current_cp = 1;
 var finishTime = "00:00.000";
+var rawTime = 0;
 var isOutline = false;
 
 function LoadCurrentTeam() {
@@ -64,7 +65,7 @@ function FormatTime(strTime) { //double
 		min = "0" + min;
 	if (sec.length < 2)
 		sec = "0" + sec;
-
+	rawTime = min*60*1000+sec*1000+miSec;
 	let time = min + ":" + sec + "." + miSec;
 	return time;
 }
@@ -154,7 +155,7 @@ function LoadPreviousTeam() {
 // Save result
 function SaveResult2DB() {
 	var xmlHttp = new XMLHttpRequest();
-	var URL = `http://localhost:3001/savedb1?totalscore=${totalScrore}&finishtime=${finishTime}`;
+	var URL = `http://localhost:3001/savedb1?totalscore=${totalScrore}&finishtime=${finishTime}&rawtime=${rawTime}`;
 	xmlHttp.open("GET", URL);
 	xmlHttp.send(null);
 	xmlHttp.onreadystatechange = (e) => {

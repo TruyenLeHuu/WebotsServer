@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <link href="dashboard.css" rel="stylesheet">
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="dashboard.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet"> 
+
+    <link rel="icon" type="image/x-icon" href="/logo/clipart2183317.png">
+
+    <title>Dashboard webots</title>
+  </head>
+  <body>
+    <div class="logo-section">
+      <div class="logo-nav ">
+        <div class="to-chuc">
+          <h5>Đơn vị tổ chức</h5>
+          <div class="logo-container">
+            <div class="to-chuc-item"><img id="uit" src="./img/UIT.png" alt=""></div>
+            <div class="to-chuc-item"><img id="doan"src="./img/Asset 2.png" alt=""></div>
+            <div class="to-chuc-item"><img id="hoi" src="./img/HoiSinhvien.png" alt=""></div>
+            <div class="to-chuc-item"><img id="khoa"src="./img/LOGO CE - stroke v2.png" alt=""></div>
+            <div class="to-chuc-item"><img id="clb" src="./img/CEEC.png" alt=""></div>
+          </div>
+        </div>
+        <div class="tai-tro-vang">
+          <h5>Nhà tài trợ vàng</h5>
+          <div class="logo-container">
+            <div class="vang-item"><img id="bosch" src="./img/Bosch.png" alt=""></div>
+            <div class="vang-item"><img id="dek" src="./img/dek.png" alt=""></div>
+            <div class="vang-item"><img id="faraday" src="./img/faraday.png" alt=""></div>
+            <div class="vang-item"><img id="gannha" src="./img/gannha.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+  
+      <div id="col-2" class="logo-nav ">
+        <div class="dong-hanh">
+          <h5>Nhà tài trợ đồng hành</h5>
+          <div class="logo-container dong-hanh-img">
+            <div class="hanh-item"><img id="fpt" src="./img/FPT.png" alt=""></div>
+            <div class="hanh-item"><img id="asic" src="./img/asic.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- logo secsion -->
+    <h1 id="lbTitle"> UIT CAR RACING 2023 </h1>
+    <div class="ptable">
+      <h1 class="headin">Rankings</h1>
+              <table id="results-table">
+                <thead>
+                  <tr class="col">
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>School</th>
+                    <th>Score</th>
+                    <th>Time</th>
+                  </tr>
+                </thead>
+                <tbody id="results-list">
+                  <% if(resultsList.length){
+                    for(var i = 0; i< resultsList.length; i++) {%>  
+                    <tr class="wpos">
+                      <td ><%= (i+1) %></td>
+                      <td ><%=resultsList[i].name%></td>
+                      <td ><%=resultsList[i].school%></td>
+                      <td ><%=resultsList[i].score%></td>
+                      <td ><%=resultsList[i].time%></td>
+                    </tr>
+                    <% }   
+                      }else{ %>
+                          <tr>
+                            <td colspan="12">No student</td>
+                          </tr>
+                      <% } %>   
+              </tbody>
+              </table>
+  </body>
+</html>

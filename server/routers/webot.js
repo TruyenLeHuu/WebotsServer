@@ -3,10 +3,12 @@ const router = express.Router()
 const controller  = require('../controllers/controller')
 
 module.exports = function (io) {
-router.get("/",(req,res)=> res.render("../views/home.ejs"))
-router.get("/control",async (req,res)=> {
-    res.render("../views/control.ejs")
-})
+router.get("/", controller.dashboard)
+//     const list_students = await student.find().select('id name subject teacher time mssv -_id');
+//         res.render("../views/dashboard.ejs",{studentList: list_students})
+//     // console.log(list_students)
+// }(req,res)=> res.render("../views/dashboard.ejs"))
+router.get("/control",controller.control)
 router.post('/addGroup',controller.addGroup)
 router.post('/deleteGroup', controller.deleteGroup)
 router.post('/updateGroup', controller.updateGroup)
