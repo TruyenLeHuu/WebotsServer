@@ -82,10 +82,10 @@ function GenerateCheckpoint() {
 		var cp_id = "cp" + i;
 		checkpoint.setAttribute("id", cp_id)
 
-		var cp_name = document.createElement("h2");
+		var cp_name = document.createElement("h3");
 		cp_name.innerHTML = "CHECK POINT " + i;
 
-		var cp_time = document.createElement("h2");
+		var cp_time = document.createElement("h3");
 		var time_id = "checkpoin-time" + i;
 		cp_time.setAttribute("id", time_id);
 		cp_time.innerHTML = "--:--.---";

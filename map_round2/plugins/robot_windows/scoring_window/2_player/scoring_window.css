@@ -106,39 +106,39 @@ h5 {
     width: auto;
     height: 65%;
     margin: auto;
-}
-
-.logo-section .logo-nav .logo-container .to-chuc-item #doan {
+  }
+  
+  .logo-section .logo-nav .logo-container .to-chuc-item #doan {
     width: auto;
     height: 76%;
     margin: auto;
-}
-
-.logo-section .logo-nav .logo-container .to-chuc-item #hoi {
+  }
+  
+  .logo-section .logo-nav .logo-container .to-chuc-item #hoi {
     width: auto;
     height: 76%;
     margin: auto;
-}
-
-.logo-section .logo-nav .logo-container .to-chuc-item #khoa {
+  }
+  
+  .logo-section .logo-nav .logo-container .to-chuc-item #khoa {
     width: auto;
     height: 76%;
     margin: auto;
-}
-
-.logo-section .logo-nav .logo-container .to-chuc-item #clb {
+  }
+  
+  .logo-section .logo-nav .logo-container .to-chuc-item #clb {
     width: auto;
     height: 90%;
     margin: auto;
     margin-top: 15%;
-}
-.logo-section .logo-nav .logo-container .to-chuc-item img {
-    width: 100%;
+  }
+  
+  .logo-section .logo-nav .logo-container .to-chuc-item img {
+    width:100%;
     height: auto;
-}
-
-
-.logo-section .logo-nav .logo-container .vang-item {
+  }
+  
+  .logo-section .logo-nav .logo-container .vang-item {
     width: 15vw;
     height: 6vw;
     background-color: white;
@@ -150,32 +150,66 @@ h5 {
     display: flex;
     justify-content: center;
     justify-items: center;
-}
-.logo-section .logo-nav .logo-container .vang-item #bosch {
-    width: auto;
-    margin: auto;
-    height: 8vw;
-    margin-top: -1vw;
-}
-
-.logo-section .logo-nav .logo-container .vang-item #dek {
-    width: auto;
-    margin: auto;
-    height: 5vw;
-}
-
-.logo-section .logo-nav .logo-container .vang-item #faraday {
+  }
+  
+  .logo-section .logo-nav .logo-container .vang-item #faraday {
     height: 4.3vw;
     width: auto;
     margin: auto;
-}
-
-.logo-section .logo-nav .logo-container .vang-item #gannha {
-    height: 3.5vw;
-    margin-right: 8%;
-    margin-top: 1.5vw;
+  }
+  
+  .logo-section .logo-nav .logo-container .hanh-item {
+    width: 16vw;
+    height: 6vw;
+    background-color: white;
+    border-radius: 4px; 
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+  }
+  
+  .logo-section .logo-nav .logo-container .hanh-item #fpt {
+    height: 7vw;
     width: auto;
-}
+    margin: auto;
+    margin-top: -4px;
+  }
+  
+  .logo-section .logo-nav .logo-container .hanh-item #uniquify {
+    height: 7vw;
+    width: auto;
+    margin: auto;
+    margin-top: -5px;
+  }
+  
+  .logo-section .logo-nav .logo-container .vang-item #dek {
+    width: auto;
+    margin: auto;
+    height: 5vw;
+  }
+  
+  .logo-section .logo-nav .logo-container .hanh-item #h123 {
+    width: auto;
+    margin: auto;
+    height: 5vw;
+  }
+  
+  .logo-section .logo-nav .logo-container .hanh-item #union {
+    width: auto;
+    margin: auto;
+    height: 5vw;
+  }
+  
+  .logo-section .logo-nav .logo-container .hanh-item #dek {
+    width: auto;
+    margin: auto;
+    height: 5vw;
+  }
+  /*end logo section */
 .logo-section .logo-nav .logo-container .vang-item img {
     width: 100%;
 }

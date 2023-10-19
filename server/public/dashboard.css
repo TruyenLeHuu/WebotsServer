@@ -65,6 +65,7 @@ h5 {
   justify-items: center;
 }
 
+
 .logo-section .logo-nav .logo-container .to-chuc-item #uit {
   width: auto;
   height: 65%;
@@ -115,31 +116,10 @@ h5 {
   justify-items: center;
 }
 
-.logo-section .logo-nav .logo-container .vang-item #bosch {
-  width: auto;
-  margin: auto;
-  height: 6vw;
-  margin-top: -1.5vw;
-}
-
-.logo-section .logo-nav .logo-container .vang-item #dek {
-  width: auto;
-  margin: auto;
-  height: 4vw;
-  margin-top: -0.5vw;
-}
-
 .logo-section .logo-nav .logo-container .vang-item #faraday {
-  height: 2vw;
+  height: 2.7vw;
   width: auto;
   margin: auto;
-}
-
-.logo-section .logo-nav .logo-container .vang-item #gannha {
-  height: 2vw;
-  margin-right: 8%;
-  margin-top: 0.8vw;
-  width: auto;
 }
 
 .logo-section .logo-nav .logo-container .hanh-item {
@@ -160,14 +140,34 @@ h5 {
   height: 4vw;
   width: auto;
   margin: auto;
-  margin-top: -0.5vw;
+  margin-top: -7px;
 }
 
-.logo-section .logo-nav .logo-container .hanh-item #asic {
+
+.logo-section .logo-nav .logo-container .hanh-item #uniquify {
   height: 4vw;
   width: auto;
   margin: auto;
-  margin-top: -0.5vw;
+  margin-top: -5px;
+}
+
+
+.logo-section .logo-nav .logo-container .hanh-item #h123 {
+  height: 3vw;
+  width: auto;
+  margin: auto;
+}
+
+.logo-section .logo-nav .logo-container .hanh-item #union {
+  width: auto;
+  margin: auto;
+  height: 3vw;
+}
+
+.logo-section .logo-nav .logo-container .hanh-item #dek {
+  width: auto;
+  margin: auto;
+  height: 3vw;
 }
 /*end logo section */
 
