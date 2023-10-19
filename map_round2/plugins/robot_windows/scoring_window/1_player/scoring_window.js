@@ -4,7 +4,7 @@ const resultScore = document.getElementById("result-score");
 const _teamName = document.getElementById("team-name");
 const resultFinishTime = document.getElementById("result-finishtime")
 const saveDB = document.getElementById("save-db");
-const controllerName = document.getElementById("controller-namee");
+const controllerName = document.getElementById("controller-name");
 
 const numberOfCheckpoint = 5;
 
@@ -43,6 +43,7 @@ window.onload = function () {
 		if (flag.split(".")[0] == "C") {
 			updateCPindex(parseInt(flag.split('.')[1]));
 			Passed(current_cp);
+			UpdateRawTime(time)
 		}
 		else if (flag.split(".")[0] == "O") {
 			Outline();
@@ -69,7 +70,19 @@ function FormatTime(strTime) { //double
 	let time = min + ":" + sec + "." + miSec;
 	return time;
 }
+function UpdateRawTime(strTime){
+	let arr = strTime.split(".");
 
+	let min = (parseInt(arr[0]) / 60).toString().split('.')[0];
+	let sec = (parseInt(arr[0]) % 60).toString();
+	let miSec = arr[1].substring(0, 3);
+
+	if (min.length < 2)
+		min = "0" + min;
+	if (sec.length < 2)
+		sec = "0" + sec;
+	rawTime = min*60*1000+sec*1000+miSec;
+}
 function UpdateStopwatch(time) {
 	stopwatch_time.innerHTML = time;
 }

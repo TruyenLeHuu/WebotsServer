@@ -9,7 +9,8 @@ const mongoose = require('mongoose');
 
 //const URI = 'mongodb://localhost:27017/testdb'
 // const URI = 'mongodb+srv://1111:1234@mernprojectceec.byvhv.mongodb.net/MERN_PROJECTCEEC?retryWrites=true&w=majority' 
-const URI = "mongodb+srv://1111:1234@cluster0.lxqs9wg.mongodb.net/?retryWrites=true&w=majority"
+// const URI = "mongodb+srv://1111:1234@cluster0.lxqs9wg.mongodb.net/?retryWrites=true&w=majority"
+const URI = "mongodb+srv://21521275:nguyenphong123@cartesting.0oiesyv.mongodb.net/?retryWrites=true&w=majority"
 var server = require("http").Server(app)
 var io = require("socket.io")(server)
 const webot = require('./routers/webot')(io)
