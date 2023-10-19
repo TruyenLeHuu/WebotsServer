@@ -80,9 +80,9 @@ function UpdateRawTime(strTime){
 		min = "0" + min;
 	if (sec.length < 2)
 		sec = "0" + sec;
-	rawTime = min*60*1000+sec*1000+miSec;
-	console.log(min + " " + sec + " " + miSec)
-	console.log(rawTime)
+	rawTime = parseInt(min)*60*1000+parseInt(sec)*1000+parseInt(miSec);
+	// console.log(min + " " + sec + " " + miSec)
+	// console.log(rawTime)
 }
 function UpdateStopwatch(time) {
 	stopwatch_time.innerHTML = time;
