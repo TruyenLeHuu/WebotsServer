@@ -13,13 +13,24 @@ $(document).ready(function () {
         for(var x = 0; x < data.length; x++)
         {
           if (x > 2) {
-            await $('#results-list').append(` <tr class="pos">
+            if (x < 16)
+            { await $('#results-list').append(` <tr class="pos">
+                                            <td scope="row">${(x+1)}</td>
+                                            <td>${data[x].name}</td>
+                                            <td>${data[x].school}</td>
+                                            <td>${data[x].score}</td>
+                                            <td>${data[x].time}</td>
+                                            </tr>`); }
+            else 
+            {
+              await $('#results-list').append(` <tr>
                                             <td scope="row">${(x+1)}</td>
                                             <td>${data[x].name}</td>
                                             <td>${data[x].school}</td>
                                             <td>${data[x].score}</td>
                                             <td>${data[x].time}</td>
                                             </tr>`);
+            }
           }
           else 
           {  
