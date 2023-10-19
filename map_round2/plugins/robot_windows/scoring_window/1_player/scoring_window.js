@@ -66,7 +66,6 @@ function FormatTime(strTime) { //double
 		min = "0" + min;
 	if (sec.length < 2)
 		sec = "0" + sec;
-	rawTime = min*60*1000+sec*1000+miSec;
 	let time = min + ":" + sec + "." + miSec;
 	return time;
 }
@@ -82,6 +81,8 @@ function UpdateRawTime(strTime){
 	if (sec.length < 2)
 		sec = "0" + sec;
 	rawTime = min*60*1000+sec*1000+miSec;
+	console.log(min + " " + sec + " " + miSec)
+	console.log(rawTime)
 }
 function UpdateStopwatch(time) {
 	stopwatch_time.innerHTML = time;
