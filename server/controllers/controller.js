@@ -292,8 +292,10 @@ const getNextTeam = async(req,res,next) => {
                     }
                 })
             })
-            else 
+            else {
             res.json({message:"Error"})
+            currentIndex = 0;
+            }
         })
     }
     catch (err) {
