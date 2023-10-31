@@ -66,10 +66,6 @@ body {
     flex-direction: column;
 }
 
-
-
-
-
 h5 {
     text-align: center;
     margin: 0;
@@ -481,18 +477,25 @@ h5 {
     padding: 0 6px;
 }
 
-.not-pass:nth-child(even) {
+.generate-checkpoint.generate-checkpoint_red .not-pass:nth-child(even) {
+    background-color: #cdb38073;
+}
+.generate-checkpoint.generate-checkpoint_blue .not-pass:nth-child(even) {
     background-color: #cdb38073;
 }
 
-.pass {
+.generate-checkpoint.generate-checkpoint_red .pass {
     background: var(--pass-checkpoint);
 }
-
-.outline {
+.generate-checkpoint.generate-checkpoint_blue .pass {
+    background: var(--pass-checkpoint);
+}
+.generate-checkpoint.generate-checkpoint_red .outline {
     background: var(--fail-checkpoint);
 }
-
+.generate-checkpoint.generate-checkpoint_blue .outline {
+    background: var(--fail-checkpoint);
+}
 /* nếu team thua thì sẽ chuyển sang màu xám  */
 
 .lost {
