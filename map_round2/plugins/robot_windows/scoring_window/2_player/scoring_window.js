@@ -54,7 +54,7 @@ window.onload = function () {
 
 		let newArr = flag.split('.');
 		if (newArr[0] == "C") {
-            		//console.log(newArr[1] + " " + newArr[2]);
+            // console.log(newArr[1] + " " + newArr[2]);
 			updateCPindex(newArr[1], parseInt(newArr[2]));
 			DemoPass(newArr[1]);
 		}
@@ -323,11 +323,13 @@ function DemoOutline(req) {
 
 function SetDone() {
 	if (isOutlineA || isDoneA) {
+		// console.log("A done!");
 		resultScore1.innerHTML = teamA.score;
 		resultTime1.innerHTML = teamA.time;
 	}
 
 	if (isOutlineB || isDoneB) {
+		// console.log("B done!");
 		resultScore2.innerHTML = teamB.score;
 		resultTime2.innerHTML = teamB.time;
 	}
