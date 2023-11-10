@@ -11,7 +11,7 @@ var teamB = null;
 var cp_indexA = 1;
 var cp_indexB = 1;
 var time = null;
-
+var isSwap = 0;
 winnerNoti.style.display = 'none';
 winnerTeam.style.innerHTML = '';
 
@@ -54,11 +54,17 @@ window.onload = function () {
 
 		let newArr = flag.split('.');
 		if (newArr[0] == "C") {
+			if (isSwap) {
+				if (newArr[1]=='A') newArr[1]='B'; else newArr[1]='A';
+			}
             // console.log(newArr[1] + " " + newArr[2]);
 			updateCPindex(newArr[1], parseInt(newArr[2]));
 			DemoPass(newArr[1]);
 		}
 		else if (newArr[0] == "O") {
+			if (isSwap) {
+				if (newArr[1]=='A') newArr[1]='B'; else newArr[1]='A';
+			}
 			DemoOutline(newArr[1]);
 		}
 	}
@@ -145,6 +151,7 @@ function UpdateTeam(str) {
 }
 
 function GetCurrentTeam() {
+	isSwap = 0;
 	var xmlHttp = new XMLHttpRequest();
 	var URL = `http://localhost:3001/currentteam`;
 	xmlHttp.open("GET", URL);
@@ -160,6 +167,7 @@ function GetCurrentTeam() {
 
 // Button click
 function LoadPrevious() {
+	isSwap = 0;
 	var xmlHttp = new XMLHttpRequest();
 	var URL = `http://localhost:3001/previousteam`;
 	xmlHttp.open("GET", URL);
@@ -174,6 +182,7 @@ function LoadPrevious() {
 }
 
 function LoadNext() {
+	isSwap = 0;
 	var xmlHttp = new XMLHttpRequest();
 	var URL = `http://localhost:3001/nextteam`;
 	xmlHttp.open("GET", URL);
@@ -196,7 +205,7 @@ function LoadSwap() {
 	// controller1.innerHTML = teamA.controller;
 	// teamName2.innerHTML = teamB.name;
 	// controller2.innerHTML = teamB.controller;
-
+	isSwap = 1;
 	var xmlHttp = new XMLHttpRequest();
 	var URL = `http://localhost:3001/swap`;
 	xmlHttp.open("GET", URL);
